@@ -1,9 +1,12 @@
+"use client";
+
 import Input from "@/components/Input";
 import List from "@/components/List";
 import Video from "@/components/Video";
+import WithAuth from "@/utils/PrivateRoutes";
 import React from "react";
 
-function Home() {
+function Dashboard() {
   return (
     <div className="flex flex-row justify-between">
       <div className="w-full mt-10">
@@ -19,4 +22,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default WithAuth(Dashboard);
